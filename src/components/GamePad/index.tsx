@@ -11,16 +11,16 @@ interface PadProps {
 	[key: string]: ColorProps
 }
 
-interface GameButtonProps extends BoxProps {
+interface GamePadProps extends BoxProps {
 	isPadActive?: boolean
 	padColor: string
 }
 
-export default function GameButton({
+export default function GamePad({
 	isPadActive,
 	padColor,
 	...rest
-}: GameButtonProps) {
+}: GamePadProps) {
 	const pad: PadProps = {
 		yellow: {
 			offColor: '#b99700',

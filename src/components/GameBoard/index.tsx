@@ -1,6 +1,6 @@
 import { Button, Flex, Text } from '@chakra-ui/react'
 import { useEffect, useRef, useState } from 'react'
-import GameButton from '../GameButton'
+import GamePad from '../GamePad'
 
 export function GameBoard() {
 	const [yellowPad, setYellowPad] = useState(false)
@@ -109,14 +109,14 @@ export function GameBoard() {
 	return (
 		<Flex flexDir="column" borderRadius="100%" position="relative">
 			<Flex>
-				<GameButton
+				<GamePad
 					onClick={() => {
 						checkOrder(1)
 					}}
 					isPadActive={yellowPad}
 					padColor="yellow"
 				/>
-				<GameButton
+				<GamePad
 					onClick={() => {
 						checkOrder(2)
 					}}
@@ -152,14 +152,14 @@ export function GameBoard() {
 				</Button>
 			</Flex>
 			<Flex>
-				<GameButton
+				<GamePad
 					onClick={() => {
 						checkOrder(3)
 					}}
 					isPadActive={redPad}
 					padColor="red"
 				/>
-				<GameButton
+				<GamePad
 					onClick={() => {
 						checkOrder(4)
 					}}
